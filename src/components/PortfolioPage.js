@@ -3,11 +3,17 @@ import Projects from "./Projects";
 const PortfolioPage = () => {
   return (
     <div>
-      <p>Hello World</p>
-      <p>My name is Brycen.</p>
+      <Hello>
+        <p>Hello World</p>
+        <p>My name is Brycen.</p>
+      </Hello>
       <Projects />
     </div>
   );
 };
 
 export default PortfolioPage;
+
+const Hello = styled.div`
+  background-color: blue;
+`;
