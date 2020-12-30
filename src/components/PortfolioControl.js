@@ -1,24 +1,24 @@
-import styled from "styled-components";
+// import styled from "styled-components";
 import { useState } from "react";
 import AdminPage from "./AdminPage";
-import PortfolioPage from "./PortfolioPage";
+import Portfolio from "./Portfolio";
 
 const PortfolioControl = () => {
   const [admin, setAdmin] = useState(false);
   let currentState = null;
 
-  const setAdminTrue = () => {
-    setAdmin(true);
-  };
+  // const setAdminTrue = () => {
+  //   setAdmin(true);
+  // };
 
-  const setAdminFalse = () => {
-    setAdmin(false);
-  };
+  // const setAdminFalse = () => {
+  //   setAdmin(false);
+  // };
 
   if (admin) {
     currentState = <AdminPage />;
   } else {
-    currentState = <PortfolioPage />;
+    currentState = <Portfolio />;
   }
 
   return <div>{currentState}</div>;
