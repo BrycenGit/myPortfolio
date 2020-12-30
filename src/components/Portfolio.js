@@ -10,17 +10,17 @@ const Portfolio = () => {
   return (
     <Wrapper>
       {/* <div className="navBar">NavBar</div> */}
-      <div className="about">About</div>
+      <div className="item about">About</div>
 
-      <div className="projects">Projects</div>
+      <div className="item projects">Projects</div>
       {/* <div className="footer">footer</div> */}
-      <div className="pictureAbout">
+      <div className="item pictureAbout">
         <img
           className="picture"
           src="https://s3.amazonaws.com/sfc-datebook-wordpress/wp-content/uploads/sites/2/2020/06/MER6619086644d19a67a11328642904d_bears0630-1024x576.jpg"
         />
       </div>
-      <div className="pictureProjects">
+      <div className="item pictureProjects">
         <img
           className="picture"
           src="https://s3.amazonaws.com/sfc-datebook-wordpress/wp-content/uploads/sites/2/2020/06/MER6619086644d19a67a11328642904d_bears0630-1024x576.jpg"
@@ -34,11 +34,12 @@ export default Portfolio;
 
 // styled Components
 const Wrapper = styled.div`
+  /* width: 100%; */
   min-height: 100%;
   display: grid;
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   /* grid-auto-rows: 240px; */
-  gap: 1rem;
+  /* gap: 1rem; */
   grid-template-areas:
     /* "a a a a" */
     "b b b b"
@@ -67,6 +68,10 @@ const Wrapper = styled.div`
   .about {
     grid-area: b;
     background-color: red;
+  }
+
+  .item {
+    margin: 10px;
   }
 
   .projects {
