@@ -71,7 +71,7 @@ const Wrapper = styled.div`
   }
 
   .item {
-    margin: 10px;
+    /* margin: 10px; */
   }
 
   .projects {
