@@ -14,7 +14,12 @@ const Portfolio = (props) => {
 
   return (
     <Wrapper>
-      <div className="navBar">NavBar</div>
+      <div className="navBar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
       <div className="item about">
         <h3>About:</h3>
         <p>
@@ -91,10 +96,30 @@ const Wrapper = styled.div`
 
   .navBar {
     grid-area: a;
-    background-color: blue;
-    height: 45px;
+    background-color: #333;
+    /* height: 45px; */
+    /* color: #f8f8f8; */
+    /* padding: 10px; */
   }
 
+  .navBar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .navBar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .navBar a.active {
+    background-color: #4caf50;
+    color: white;
+  }
   .about {
     grid-area: b;
     /* background-color: red; */
