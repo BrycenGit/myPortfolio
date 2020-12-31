@@ -6,18 +6,18 @@ const PortfolioControl = () => {
   const [admin, setAdmin] = useState(false);
   let currentState = null;
 
-  // const setAdminTrue = () => {
-  //   setAdmin(true);
-  // };
+  const setAdminTrue = () => {
+    setAdmin(true);
+  };
 
-  // const setAdminFalse = () => {
-  //   setAdmin(false);
-  // };
+  const setAdminFalse = () => {
+    setAdmin(false);
+  };
 
   if (admin) {
-    currentState = <AdminPage />;
+    currentState = <AdminPage setAdminFalse={setAdminFalse} />;
   } else {
-    currentState = <Portfolio />;
+    currentState = <Portfolio setAdminTrue={setAdminTrue} />;
   }
 
   return <>{currentState}</>;

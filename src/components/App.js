@@ -6,13 +6,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
-    <Wrapper>
-      <div className="header">NavBar</div>
-      <div className="main">
-        <PortfolioControl />
-      </div>
-      <div className="footer">Footer</div>
-    </Wrapper>
+    // <Wrapper>
+    //   <div className="header">NavBar</div>
+    //   <div className="main">
+    //     <PortfolioControl />
+    //   </div>
+    //   <div className="footer">Footer</div>
+    // </Wrapper>
+    <>
+      <PortfolioControl />
+    </>
   );
 };
 

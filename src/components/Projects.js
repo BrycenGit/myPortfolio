@@ -22,7 +22,12 @@ const Projects = () => {
                 backgroundImage: `url(${space})`,
               };
               return (
-                <div className="card" key={pro.id} style={divStyle}>
+                <div
+                  onClick={() => window.open(pro.url)}
+                  className="card"
+                  key={pro.id}
+                  style={divStyle}
+                >
                   <div>{pro.name}</div>
                 </div>
               );

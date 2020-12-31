@@ -9,10 +9,12 @@ import ProjectCarousel from "./ProjectCarousel";
 //   width: "auto",
 // };
 
-const Portfolio = () => {
+const Portfolio = (props) => {
+  const { setAdminTrue } = props;
+
   return (
     <Wrapper>
-      {/* <div className="navBar">NavBar</div> */}
+      <div className="navBar">NavBar</div>
       <div className="item about">
         <h3>About:</h3>
         <p>
@@ -30,7 +32,9 @@ const Portfolio = () => {
         {/* <ProjectCarousel /> */}
         {/* <h3>Projects:</h3> */}
       </div>
-      {/* <div className="footer">footer</div> */}
+      <div className="footer">
+        <button onClick={setAdminTrue}>Admin</button>
+      </div>
       <div className="item pictureAbout">
         <img className="picture" src={clouds} alt="Me" />
       </div>
@@ -49,44 +53,47 @@ export default Portfolio;
 
 // styled Components
 const Wrapper = styled.div`
-  /* width: 100%; */
-  min-height: 100%;
+  width: 100%;
+  height: 100vh;
+  /* min-height: 100%; */
   display: grid;
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   /* grid-auto-rows: 240px; */
   /* gap: 1rem; */
   grid-template-areas:
-    /* "a a a a" */
+    "a a a a"
     "b b b b"
     "i i i i"
     "c c c c"
-    "i2 i2 i2 i2";
-  /* "d d d d"; */
+    "i2 i2 i2 i2"
+    "d d d d";
   grid-template-columns: repeat(4, 25%);
-  grid-template-rows: 0.75fr 1fr 0.75fr 1fr;
+  grid-template-rows: auto 0.75fr 1fr 0.75fr 1fr auto;
 
   @media screen and (min-width: 600px) {
     grid-template-areas:
-      /* "a a a a" */
+      "a a a a"
       "b b i i"
-      "i2 i2 c c";
-    /* "d d d d"; */
-    grid-template-rows: 1fr 1fr;
+      "i2 i2 c c"
+      "d d d d";
+    grid-template-rows: auto 1fr 1fr auto;
   }
   @media screen and (min-width: 992px) {
+    height: 100vh;
     grid-template-areas:
-      /* "a a a a" */
+      "a a a a"
       "b b i i"
-      "c c i i";
-    /* "d d d d"; */
-    grid-template-rows: 0.5fr 0.5fr;
+      "c c i i"
+      "i2 i2 i i"
+      "d d d d";
+    grid-template-rows: auto 1fr 1fr 1fr auto;
   }
 
-  /* .navBar {
+  .navBar {
     grid-area: a;
     background-color: blue;
     height: 45px;
-  } */
+  }
 
   .about {
     grid-area: b;
@@ -103,10 +110,11 @@ const Wrapper = styled.div`
     /* background-color: purple; */
   }
 
-  /* .footer {
+  .footer {
     grid-area: d;
     background-color: green;
-  } */
+    height: 45px;
+  }
 
   .pictureAbout {
     grid-area: i;
