@@ -15,10 +15,34 @@ const Portfolio = (props) => {
   return (
     <Wrapper>
       <div className="navBar">
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <button
+          onClick={() => {
+            alert("hello");
+          }}
+        >
+          Home
+        </button>
+        <button
+          onClick={() => {
+            alert("hello");
+          }}
+        >
+          News
+        </button>
+        <button
+          onClick={() => {
+            alert("hello");
+          }}
+        >
+          Contact
+        </button>
+        <button
+          onClick={() => {
+            alert("hello");
+          }}
+        >
+          About
+        </button>
       </div>
       <div className="item about">
         <h3>About:</h3>
@@ -38,7 +62,38 @@ const Portfolio = (props) => {
         {/* <h3>Projects:</h3> */}
       </div>
       <div className="footer">
+        <div className="copy">
+          Copyright © 2020 Apple Inc. All rights reserved.
+        </div>
         <button onClick={setAdminTrue}>Admin</button>
+        <button
+          onClick={() => {
+            alert("hello");
+          }}
+        >
+          Home
+        </button>
+        <button
+          onClick={() => {
+            alert("hello");
+          }}
+        >
+          News
+        </button>
+        <button
+          onClick={() => {
+            alert("hello");
+          }}
+        >
+          Contact
+        </button>
+        <button
+          onClick={() => {
+            alert("hello");
+          }}
+        >
+          About
+        </button>
       </div>
       <div className="item pictureAbout">
         <img className="picture" src={clouds} alt="Me" />
@@ -96,30 +151,29 @@ const Wrapper = styled.div`
 
   .navBar {
     grid-area: a;
-    background-color: #333;
+    background-color: #3975c2;
     /* height: 45px; */
     /* color: #f8f8f8; */
     /* padding: 10px; */
   }
 
-  .navBar a {
+  .navBar button {
+    border: none;
+    outline: none;
+    background: none;
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 14px;
     text-decoration: none;
     font-size: 17px;
   }
 
-  .navBar a:hover {
+  .navBar button:hover {
     background-color: #ddd;
     color: black;
   }
 
-  .navBar a.active {
-    background-color: #4caf50;
-    color: white;
-  }
   .about {
     grid-area: b;
     /* background-color: red; */
@@ -137,8 +191,29 @@ const Wrapper = styled.div`
 
   .footer {
     grid-area: d;
-    background-color: green;
-    height: 45px;
+    background-color: #333;
+  }
+
+  .footer .copy {
+    float: left;
+    padding: 10px 14px;
+  }
+
+  .footer button {
+    border: none;
+    outline: none;
+    background: none;
+    float: left;
+    color: #f8f8f8;
+    text-align: center;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .footer button:hover {
+    /* background-color: #ddd; */
+    color: black;
   }
 
   .pictureAbout {
