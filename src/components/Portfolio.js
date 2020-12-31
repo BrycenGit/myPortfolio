@@ -71,7 +71,7 @@ const Wrapper = styled.div`
       "b b i i"
       "i2 i2 c c";
     /* "d d d d"; */
-    grid-template-rows: 1.25fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 
   /* .navBar {

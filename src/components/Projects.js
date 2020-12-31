@@ -20,8 +20,9 @@ const Projects = () => {
             projectsList.map((pro) => {
               const divStyle = {
                 backgroundImage: `url(${space})`,
+                backgroundSize: "cover",
                 width: "100%",
-                height: "auto",
+                height: "100%",
               };
               return (
                 <div key={pro.id} style={divStyle}>
