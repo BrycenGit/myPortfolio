@@ -73,7 +73,7 @@ const Wrapper = styled.div`
     /* "d d d d"; */
     grid-template-rows: 1fr 1fr;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 992px) {
     grid-template-areas:
       /* "a a a a" */
       "b b i i"
