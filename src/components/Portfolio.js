@@ -25,7 +25,7 @@ const Portfolio = () => {
         </p>
       </div>
 
-      <div className=" projects">
+      <div className="item projects">
         <Projects />
         {/* <ProjectCarousel /> */}
         {/* <h3>Projects:</h3> */}
@@ -63,7 +63,7 @@ const Wrapper = styled.div`
     "i2 i2 i2 i2";
   /* "d d d d"; */
   grid-template-columns: repeat(4, 25%);
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 0.75fr 1fr;
 
   @media screen and (min-width: 600px) {
     grid-template-areas:
@@ -71,7 +71,7 @@ const Wrapper = styled.div`
       "b b i i"
       "i2 i2 c c";
     /* "d d d d"; */
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1.25fr 1fr;
   }
 
   /* .navBar {

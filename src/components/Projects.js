@@ -20,7 +20,8 @@ const Projects = () => {
             projectsList.map((pro) => {
               const divStyle = {
                 backgroundImage: `url(${space})`,
-                backgroundSize: "auto",
+                width: "100%",
+                height: "auto",
               };
               return (
                 <div key={pro.id} style={divStyle}>
@@ -42,8 +43,10 @@ const Projects = () => {
 export default Projects;
 
 const ProjectWrapper = styled.div`
+  /* padding: 5px; */
   display: grid;
-  gap: 1rem;
+  gap: 5px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   /* grid-template-rows: repeat(auto-fit, minmax(240px, 1fr)); */
+  grid-auto-rows: 100px;
 `;
