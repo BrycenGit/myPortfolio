@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Projects from "./Projects";
 
 // const divStyle = {
 //   backgroundImage:
@@ -10,20 +11,35 @@ const Portfolio = () => {
   return (
     <Wrapper>
       {/* <div className="navBar">NavBar</div> */}
-      <div className="item about">About</div>
+      <div className="item about">
+        <h3>About:</h3>
+        <p>
+          Hello all! I'm a software developer with an abundance of experience in
+          culinary management. I've decided to journey into the world of tech to
+          gain new knowledge and insight on the ever evolving world. This comes
+          at a time when the majority of human interaction is happening in the
+          digital realm. I'm excited for the journey ahead and the experiences I
+          will be apart of.{" "}
+        </p>
+      </div>
 
-      <div className="item projects">Projects</div>
+      <div className="item projects">
+        <Projects />
+        {/* <h3>Projects:</h3> */}
+      </div>
       {/* <div className="footer">footer</div> */}
-      <div className="item pictureAbout">
+      <div className=" pictureAbout">
         <img
           className="picture"
           src="https://s3.amazonaws.com/sfc-datebook-wordpress/wp-content/uploads/sites/2/2020/06/MER6619086644d19a67a11328642904d_bears0630-1024x576.jpg"
+          alt="Me"
         />
       </div>
-      <div className="item pictureProjects">
+      <div className=" pictureProjects">
         <img
           className="picture"
           src="https://s3.amazonaws.com/sfc-datebook-wordpress/wp-content/uploads/sites/2/2020/06/MER6619086644d19a67a11328642904d_bears0630-1024x576.jpg"
+          alt="Me"
         />
       </div>
     </Wrapper>
@@ -72,6 +88,7 @@ const Wrapper = styled.div`
 
   .item {
     /* margin: 10px; */
+    padding: 20px;
   }
 
   .projects {
