@@ -2,6 +2,7 @@ import "../App.css";
 import React from "react";
 import styled from "styled-components";
 import PortfolioControl from "./PortfolioControl";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (

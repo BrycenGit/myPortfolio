@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Projects from "./Projects";
+import clouds from "../assets/clouds.PNG";
+import ProjectCarousel from "./ProjectCarousel";
 
 // const divStyle = {
 //   backgroundImage:
@@ -23,17 +25,14 @@ const Portfolio = () => {
         </p>
       </div>
 
-      <div className="item projects">
+      <div className=" projects">
         <Projects />
+        {/* <ProjectCarousel /> */}
         {/* <h3>Projects:</h3> */}
       </div>
       {/* <div className="footer">footer</div> */}
       <div className=" pictureAbout">
-        <img
-          className="picture"
-          src="https://s3.amazonaws.com/sfc-datebook-wordpress/wp-content/uploads/sites/2/2020/06/MER6619086644d19a67a11328642904d_bears0630-1024x576.jpg"
-          alt="Me"
-        />
+        <img className="picture" src={clouds} alt="Me" />
       </div>
       <div className=" pictureProjects">
         <img

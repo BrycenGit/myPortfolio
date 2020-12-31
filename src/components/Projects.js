@@ -1,5 +1,7 @@
 import { useFirestore, isLoaded } from "react-redux-firebase";
 import { useCollectionData } from "react-firebase-hooks/firestore";
+import styled from "styled-components";
+import space from "../assets/space.jpg";
 
 const Projects = () => {
   const firestore = useFirestore();
@@ -9,10 +11,27 @@ const Projects = () => {
   const [projectsList] = useCollectionData(projectsRef, { idField: "id" });
 
   if (isLoaded(projectsList)) {
+    console.log(projectsList);
     return (
       <>
         <h3>Projects:</h3>
-        <p>{projectsList.length}</p>
+        <ProjectWrapper>
+          {projectsList &&
+            projectsList.map((pro) => {
+              const divStyle = {
+                backgroundImage: `url(${space})`,
+                backgroundSize: "auto",
+              };
+              return (
+                <div key={pro.id} style={divStyle}>
+                  {/* <p>{pro.name}</p> */}
+                  <a href={pro.url}>{pro.name}</a>
+                </div>
+              );
+            })}
+        </ProjectWrapper>
+
+        {/* <p>{projectsList.length}</p> */}
       </>
     );
   } else {
@@ -21,3 +40,10 @@ const Projects = () => {
 };
 
 export default Projects;
+
+const ProjectWrapper = styled.div`
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* grid-template-rows: repeat(auto-fit, minmax(240px, 1fr)); */
+`;
