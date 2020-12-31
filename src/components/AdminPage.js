@@ -16,6 +16,7 @@ const AdminPage = (props) => {
 
   return (
     <>
+      <div>Add Projects to portfolio</div>
       <form onSubmit={addProjectToFirestore}>
         <input
           name="name"

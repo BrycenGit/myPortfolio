@@ -24,14 +24,14 @@ const Portfolio = (props) => {
         </button>
         <button
           onClick={() => {
-            alert("hello");
+            alert("Just Fear and Hate");
           }}
         >
           News
         </button>
         <button
           onClick={() => {
-            alert("hello");
+            alert("Hello");
           }}
         >
           Contact
@@ -63,37 +63,33 @@ const Portfolio = (props) => {
       </div>
       <div className="footer">
         <div className="copy">
-          Copyright © 2020 Apple Inc. All rights reserved.
+          Copyright © Brycen Bartolome. All rights reserved.
         </div>
-        <button onClick={setAdminTrue}>Admin</button>
-        <button
-          onClick={() => {
-            alert("hello");
-          }}
-        >
-          Home
-        </button>
-        <button
-          onClick={() => {
-            alert("hello");
-          }}
-        >
-          News
-        </button>
-        <button
-          onClick={() => {
-            alert("hello");
-          }}
-        >
-          Contact
-        </button>
-        <button
-          onClick={() => {
-            alert("hello");
-          }}
-        >
-          About
-        </button>
+        <div className="buttons">
+          <button onClick={setAdminTrue}>Admin</button>
+          <button
+            onClick={() => {
+              alert("hello");
+            }}
+          >
+            Home
+          </button>
+
+          <button
+            onClick={() => {
+              alert("I prefer not to watch");
+            }}
+          >
+            Contact
+          </button>
+          <button
+            onClick={() => {
+              alert("hello");
+            }}
+          >
+            About
+          </button>
+        </div>
       </div>
       <div className="item pictureAbout">
         <img className="picture" src={clouds} alt="Me" />
@@ -192,6 +188,9 @@ const Wrapper = styled.div`
   .footer {
     grid-area: d;
     background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .footer .copy {
