@@ -31,10 +31,10 @@ const Portfolio = () => {
         {/* <h3>Projects:</h3> */}
       </div>
       {/* <div className="footer">footer</div> */}
-      <div className=" pictureAbout">
+      <div className="item pictureAbout">
         <img className="picture" src={clouds} alt="Me" />
       </div>
-      <div className=" pictureProjects">
+      <div className="item pictureProjects">
         <img
           className="picture"
           src="https://s3.amazonaws.com/sfc-datebook-wordpress/wp-content/uploads/sites/2/2020/06/MER6619086644d19a67a11328642904d_bears0630-1024x576.jpg"
@@ -63,7 +63,7 @@ const Wrapper = styled.div`
     "i2 i2 i2 i2";
   /* "d d d d"; */
   grid-template-columns: repeat(4, 25%);
-  grid-template-rows: 1fr 1fr 0.75fr 1fr;
+  grid-template-rows: 0.75fr 1fr 0.75fr 1fr;
 
   @media screen and (min-width: 600px) {
     grid-template-areas:
@@ -72,6 +72,14 @@ const Wrapper = styled.div`
       "i2 i2 c c";
     /* "d d d d"; */
     grid-template-rows: 1fr 1fr;
+  }
+  @media screen and (min-width: 1200px) {
+    grid-template-areas:
+      /* "a a a a" */
+      "b b i i"
+      "c c i i";
+    /* "d d d d"; */
+    grid-template-rows: 0.5fr 0.5fr;
   }
 
   /* .navBar {
@@ -82,7 +90,7 @@ const Wrapper = styled.div`
 
   .about {
     grid-area: b;
-    background-color: red;
+    /* background-color: red; */
   }
 
   .item {
@@ -92,7 +100,7 @@ const Wrapper = styled.div`
 
   .projects {
     grid-area: c;
-    background-color: purple;
+    /* background-color: purple; */
   }
 
   /* .footer {
@@ -113,5 +121,6 @@ const Wrapper = styled.div`
     object-fit: cover;
     width: 100%;
     height: 100%;
+    border-radius: 20px;
   }
 `;
