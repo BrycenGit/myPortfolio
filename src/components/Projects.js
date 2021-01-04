@@ -11,7 +11,6 @@ const Projects = () => {
   const [projectsList] = useCollectionData(projectsRef, { idField: "id" });
 
   if (isLoaded(projectsList)) {
-    console.log(projectsList);
     return (
       <>
         <h3>Projects:</h3>

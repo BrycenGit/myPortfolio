@@ -1,10 +1,14 @@
 import "../App.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import PortfolioControl from "./PortfolioControl";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
+  useEffect(() => {
+    document.title = `Brycen's Portfolio`;
+  });
+
   return (
     // <Wrapper>
     //   <div className="header">NavBar</div>
