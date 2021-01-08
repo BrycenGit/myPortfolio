@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Footer = () => {
   return (
     <Container>
-      <div>Footer</div>
+      <div>Copyright © Brycen Bartolome. All rights reserved.</div>
     </Container>
   );
 };

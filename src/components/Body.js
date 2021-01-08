@@ -25,7 +25,7 @@ const Body = () => {
 
   return (
     <Wrapper>
-      <Navbar />
+      {/* <Navbar /> */}
       {currentState}
       <Footer />
     </Wrapper>
@@ -38,5 +38,5 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
 `;

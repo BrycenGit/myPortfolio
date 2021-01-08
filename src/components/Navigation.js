@@ -16,14 +16,17 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-
+  margin: 10px 10px;
   button {
-    margin: 5px 10px;
     border: none;
     outline: none;
     background: none;
-    background-color: green;
     padding: 5px 8px;
     border-radius: 2px;
+  }
+
+  button:hover {
+    background-color: black;
+    color: #f8f8f8;
   }
 `;
