@@ -13,6 +13,24 @@ const Body = () => {
   const [contact, setContact] = useState(false);
   const [projects, setProjects] = useState(false);
 
+  const backToHome = () => {
+    setAbout(false);
+    setContact(false);
+    setProjects(false);
+  };
+
+  const goToProjects = () => {
+    setProjects(true);
+  };
+
+  const goToAbout = () => {
+    setAbout(true);
+  };
+
+  const goToContact = () => {
+    setContact(true);
+  };
+
   if (about) {
     currentState = <About />;
   } else if (contact) {
@@ -20,14 +38,20 @@ const Body = () => {
   } else if (projects) {
     currentState = <Projects />;
   } else {
-    currentState = <Home />;
+    currentState = (
+      <Home
+        goToAbout={goToAbout}
+        goToContact={goToContact}
+        goToProjects={goToProjects}
+      />
+    );
   }
 
   return (
     <Wrapper>
-      {/* <Navbar /> */}
+      <Navbar backToHome={backToHome} />
       {currentState}
-      <Footer />
+      <Footer classname="show" />
     </Wrapper>
   );
 };
@@ -38,5 +62,6 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  background-color: #f8f8f8;
 `;

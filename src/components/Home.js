@@ -2,12 +2,17 @@ import styled from "styled-components";
 import Navigation from "./Navigation";
 import Social from "./Social";
 
-const Home = () => {
+const Home = (props) => {
+  const { goToProjects, goToAbout, goToContact } = props;
   return (
     <Container>
       <div className="item title">Hello World, I'm Brycen!</div>
       <div className="item description">I develop web apps ^_^</div>
-      <Navigation />
+      <Navigation
+        goToAbout={goToAbout}
+        goToContact={goToContact}
+        goToProjects={goToProjects}
+      />
       <Social />
     </Container>
   );

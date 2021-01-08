@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-const Navigation = () => {
+const Navigation = (props) => {
+  const { goToProjects, goToAbout, goToContact } = props;
   return (
     <Container>
-      <button>About</button>
-      <button>Projects</button>
-      <button>Contact</button>
+      <button onClick={goToAbout}>About</button>
+      <button onClick={goToProjects}>Projects</button>
+      <button onClick={goToContact}>Contact</button>
     </Container>
   );
 };

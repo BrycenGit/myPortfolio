@@ -13,13 +13,13 @@ const Social = () => {
           window.open("https://www.linkedin.com/in/brycenbartolome/")
         }
       >
-        <img height={30} src={Linkedin} />
+        <img height={20} src={Linkedin} />
       </div>
       <div
         className="icon"
         onClick={() => window.open("https://github.com/BrycenGit")}
       >
-        <img height={30} src={Github} />
+        <img height={20} src={Github} />
       </div>
       <div
         className="icon"
@@ -29,13 +29,13 @@ const Social = () => {
           )
         }
       >
-        <img height={30} src={Youtube} />
+        <img height={20} src={Youtube} />
       </div>
       <div
         className="icon"
         onClick={() => window.open("https://www.twitch.tv/sugarandshoyu")}
       >
-        <img height={30} src={Twitch} />
+        <img height={20} src={Twitch} />
       </div>
     </Container>
   );
