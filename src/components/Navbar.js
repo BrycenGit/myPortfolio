@@ -1,10 +1,14 @@
 import styled from "styled-components";
+import Home from "../icons/Home.svg";
 
 const Navbar = (props) => {
   const { backToHome } = props;
   return (
     <Container>
-      <button onClick={backToHome}>Home</button>
+      <div className="icon" onClick={backToHome}>
+        <img src={Home} height={30} />
+      </div>
+      {/* <button onClick={backToHome}>Home</button> */}
     </Container>
   );
 };
@@ -23,5 +27,11 @@ const Container = styled.div`
   }
   button:hover {
     text-decoration: underline;
+  }
+  .icon {
+    padding: 10px 14px;
+  }
+  .icon:hover {
+    cursor: pointer;
   }
 `;

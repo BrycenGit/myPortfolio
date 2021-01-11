@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styled from "styled-components";
 import About from "./About";
 import Contact from "./Contact";
@@ -12,7 +12,8 @@ const Body = () => {
   const [about, setAbout] = useState(false);
   const [contact, setContact] = useState(false);
   const [projects, setProjects] = useState(false);
-
+  const aboutSection = useRef();
+  const projectsSection = useRef();
   const backToHome = () => {
     setAbout(false);
     setContact(false);
@@ -20,11 +21,13 @@ const Body = () => {
   };
 
   const goToProjects = () => {
-    setProjects(true);
+    // setProjects(true);
+    projectsSection.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const goToAbout = () => {
-    setAbout(true);
+    // setAbout(true);
+    aboutSection.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const goToContact = () => {
@@ -39,18 +42,26 @@ const Body = () => {
     currentState = <Projects />;
   } else {
     currentState = (
-      <Home
-        goToAbout={goToAbout}
-        goToContact={goToContact}
-        goToProjects={goToProjects}
-      />
+      <>
+        <Home
+          goToAbout={goToAbout}
+          goToContact={goToContact}
+          goToProjects={goToProjects}
+        />
+        <div ref={projectsSection}>
+          <Projects />
+        </div>
+        <div ref={aboutSection}>
+          <About />
+        </div>
+      </>
     );
   }
 
   return (
     <Wrapper>
       <Navbar backToHome={backToHome} />
-      {currentState}
+      <div>{currentState}</div>
       <Footer classname="show" />
     </Wrapper>
   );

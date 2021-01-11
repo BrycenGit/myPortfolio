@@ -27,7 +27,7 @@ const Container = styled.div`
   text-align: center;
   padding-top: 200px;
   background-color: #f8f8f8;
-
+  height: 100vh;
   .item {
     margin: 10px 10px;
   }
