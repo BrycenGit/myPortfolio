@@ -16,8 +16,9 @@ const Navbar = (props) => {
 export default Navbar;
 
 const Container = styled.div`
-  background-color: #f8f8f8;
+  /* background-color: blue; */
   /* padding: 10px 14px; */
+  /* position: fixed; */
   button {
     border: none;
     outline: none;

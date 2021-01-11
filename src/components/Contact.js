@@ -27,6 +27,7 @@ export default function ContactUs() {
 
   return (
     <Container>
+      <div className="title">Contact</div>
       <form className="contact-form" onSubmit={sendEmail}>
         <input type="hidden" name="contact_number" />
         <div>
@@ -66,4 +67,12 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .title {
+    font-size: 32pt;
+    text-decoration: underline;
+  }
+  form {
+    padding-top: 40px;
+  }
 `;

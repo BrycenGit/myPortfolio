@@ -13,6 +13,7 @@ const Body = () => {
   const [contact, setContact] = useState(false);
   const [projects, setProjects] = useState(false);
   const aboutSection = useRef();
+  const mainSection = useRef();
   const projectsSection = useRef();
   const backToHome = () => {
     setAbout(false);
@@ -30,6 +31,10 @@ const Body = () => {
     aboutSection.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  const goToMain = () => {
+    mainSection.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   const goToContact = () => {
     setContact(true);
   };
@@ -43,11 +48,13 @@ const Body = () => {
   } else {
     currentState = (
       <>
-        <Home
-          goToAbout={goToAbout}
-          goToContact={goToContact}
-          goToProjects={goToProjects}
-        />
+        <div ref={mainSection}>
+          <Home
+            goToAbout={goToAbout}
+            goToContact={goToContact}
+            goToProjects={goToProjects}
+          />
+        </div>
         <div ref={projectsSection}>
           <Projects />
         </div>

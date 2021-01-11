@@ -26,6 +26,7 @@ const Container = styled.div`
   text-align: center;
 
   background-color: #f8f8f8;
+  padding-top: 40px;
   padding-bottom: 200px;
   .title {
     font-size: 32pt;
