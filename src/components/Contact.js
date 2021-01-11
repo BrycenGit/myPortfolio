@@ -28,31 +28,31 @@ export default function ContactUs() {
   return (
     <Container>
       <div className="title">Contact</div>
-      <form className="contact-form" onSubmit={sendEmail}>
+      <form onSubmit={sendEmail}>
         <input type="hidden" name="contact_number" />
         <div>
           <label>Name</label>
         </div>
         <div>
-          <input type="text" name="name" />
+          <input className="input" type="text" name="name" />
         </div>
         <div>
           <label>Email</label>
         </div>
         <div>
-          <input type="email" name="email" />
+          <input className="input" type="email" name="email" />
         </div>
         <div>
           <label>Subject</label>
         </div>
         <div>
-          <input type="text" name="subject" />
+          <input className="input" type="text" name="subject" />
         </div>
         <div>
           <label>Message</label>
         </div>
         <div>
-          <textarea name="message" />
+          <textarea className="input" name="message" />
         </div>
         <div>
           <input type="submit" value="Send" />
@@ -74,5 +74,9 @@ const Container = styled.div`
   }
   form {
     padding-top: 40px;
+    width: 400px;
+  }
+  .input {
+    width: 100%;
   }
 `;

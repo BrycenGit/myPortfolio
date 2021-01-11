@@ -15,7 +15,12 @@ const Project = () => {
           to create an app that took your privacy seriously.
         </span>
       </div>
-      <div className="imgDiv">
+      <div
+        className="imgDiv"
+        onClick={() => {
+          window.open("https://capstone-chat-3c5ec.web.app/");
+        }}
+      >
         <img src={CypherChat} alt="cypherChat" />
       </div>
     </Container>
@@ -44,11 +49,14 @@ const Container = styled.div`
   .imgDiv {
     margin-top: 40px;
   }
+  .imgDiv:hover {
+    cursor: pointer;
+  }
 
   img {
     object-fit: cover;
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: auto;
     border-radius: 0.5rem;
   }
 `;
