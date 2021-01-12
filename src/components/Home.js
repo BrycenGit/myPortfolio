@@ -21,13 +21,19 @@ const Home = (props) => {
 export default Home;
 
 const Container = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  text-align: center;
-  padding-top: 200px;
-  background-color: #f8f8f8;
-  height: 100vh;
+  justify-content: center;
+
+  align-items: center;
+  /* text-align: center; */
+  /* padding-top: 200px; */
+  align-content: center;
+  /* background-color: #f8f8f8; */
+
   .item {
     margin: 10px 10px;
   }

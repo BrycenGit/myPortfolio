@@ -6,12 +6,20 @@ const About = () => {
   return (
     <Container>
       <div className="title">About</div>
-      <div className="imgDiv">
-        <img src={Head} />
-      </div>
-      <div className="description">
-        Hi everyone I'm Brycen! I'm a web developer based out of Oregon, but now
-        everything is remote so I'm based Everywhere.
+      <div className="content">
+        <div className="imgDiv">
+          <img src={Head} />
+        </div>
+        <div className="description">
+          Hi everyone I'm Brycen! I'm a web developer based out of Oregon, but
+          now everything is remote so I'm based Everywhere. I Love Learning
+          about and Building new web applications. I recently completed a
+          programming bootcamp based out of Portland, Oregon called Epicodus and
+          I'm excited for what the future has ahead. I can write Code in React,
+          Ruby, Javascript, Html, and CSS. I am open to Freelance work as well
+          as Employment. If you have any questions or just want to say hi, Feel
+          free to contact me. Peace!
+        </div>
       </div>
     </Container>
   );
@@ -24,20 +32,25 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-
-  background-color: #f8f8f8;
   padding-top: 40px;
-  padding-bottom: 200px;
+  padding-bottom: 40px;
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 25px;
+  }
   .title {
     font-size: 32pt;
     text-decoration: underline;
   }
   .imgDiv {
-    margin-top: 40px;
   }
   .description {
-    margin-top: 40px;
-    width: 400px;
+    width: 350px;
   }
 
   img {

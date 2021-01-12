@@ -15,6 +15,7 @@ const Body = () => {
   const aboutSection = useRef();
   const mainSection = useRef();
   const projectsSection = useRef();
+  const contactSection = useRef();
   const backToHome = () => {
     setAbout(false);
     setContact(false);
@@ -36,7 +37,8 @@ const Body = () => {
   };
 
   const goToContact = () => {
-    setContact(true);
+    // setContact(true);
+    contactSection.current.scrollIntoView({ behavior: "smooth" });
   };
 
   if (about) {
@@ -61,13 +63,16 @@ const Body = () => {
         <div ref={aboutSection}>
           <About />
         </div>
+        <div ref={contactSection}>
+          <Contact />
+        </div>
       </>
     );
   }
 
   return (
     <Wrapper>
-      <Navbar backToHome={backToHome} />
+      {/* <Navbar backToHome={backToHome} /> */}
       <div>{currentState}</div>
       <Footer classname="show" />
     </Wrapper>
@@ -77,9 +82,11 @@ const Body = () => {
 export default Body;
 
 const Wrapper = styled.div`
-  width: 100%;
+  /* background-color: red; */
+  min-width: 100%;
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-color: #f8f8f8;
+  @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+  font-family: "Roboto", sans-serif;
 `;

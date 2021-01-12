@@ -5,7 +5,7 @@ const Project = () => {
   return (
     <Container>
       <div className="description">
-        <span className="title">CypherChat</span>
+        <span className="name">CypherChat</span>
         <br />
         <span>
           Cypher chat is an End to End encrypted messaging app that allows users
@@ -30,24 +30,26 @@ const Project = () => {
 export default Project;
 
 const Container = styled.div`
+  padding: 40px;
+  width: 100%;
+  /* background-color: #0dade1; */
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #f8f8f8;
-  gap: 1rem;
+  color: white;
+
+  gap: 1.5rem;
   text-align: left;
-  .title {
+
+  .name {
     font-size: 20pt;
-    text-decoration: underline;
   }
   .description {
-    margin-top: 40px;
-    width: 400px;
+    width: 350px;
   }
   .imgDiv {
-    margin-top: 40px;
   }
   .imgDiv:hover {
     cursor: pointer;
@@ -55,7 +57,7 @@ const Container = styled.div`
 
   img {
     object-fit: cover;
-    width: 400px;
+    width: 350px;
     height: auto;
     border-radius: 0.5rem;
   }

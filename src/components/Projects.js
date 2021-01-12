@@ -16,29 +16,21 @@ const Projects = () => {
 export default Projects;
 
 const Container = styled.div`
+  background-color: #0dade1;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
 
   align-items: center;
   text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: white;
 
-  background-color: #f8f8f8;
+  /* background-color: #0dade1; */
+  /* background-image: linear-gradient(to right, #0dade1, #3bbdb7); */
   .title {
     font-size: 32pt;
-    text-decoration: underline;
+    /* text-decoration: underline; */
   }
-  /* .description {
-    margin-top: 40px;
-    width: 400px;
-  }
-  .imgDiv {
-    margin-top: 40px;
-  }
-
-  img {
-    object-fit: cover;
-    width: 350px;
-    height: 350px;
-    border-radius: 0.5rem;
-  } */
 `;
