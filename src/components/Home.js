@@ -21,8 +21,6 @@ const Home = (props) => {
 export default Home;
 
 const Container = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-  font-family: "Roboto", sans-serif;
   height: 100vh;
   display: flex;
   flex-direction: column;

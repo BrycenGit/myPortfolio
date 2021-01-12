@@ -32,7 +32,7 @@ export default Project;
 const Container = styled.div`
   padding: 40px;
   width: 100%;
-  /* background-color: #0dade1; */
+
   display: flex;
   flex-direction: row;
   justify-content: center;

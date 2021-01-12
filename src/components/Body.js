@@ -83,10 +83,10 @@ export default Body;
 
 const Wrapper = styled.div`
   /* background-color: red; */
-  min-width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-  font-family: "Roboto", sans-serif;
+  /* min-width: 100%; */
+  /* height: 100vh; */
+  /* display: grid;
+  grid-template-rows: 1fr auto; */
+  /* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+  font-family: "Roboto", sans-serif; */
 `;
