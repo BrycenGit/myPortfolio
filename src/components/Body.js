@@ -6,6 +6,7 @@ import Projects from "./Projects";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Home from "./Home";
+import Navigation from "./Navigation";
 
 const Body = () => {
   let currentState = null;
@@ -57,7 +58,12 @@ const Body = () => {
             goToProjects={goToProjects}
           />
         </div>
-        <div ref={projectsSection}>
+        <Navigation
+          goToAbout={goToAbout}
+          goToContact={goToContact}
+          goToProjects={goToProjects}
+        />
+        <div className="proj" ref={projectsSection}>
           <Projects />
         </div>
         <div ref={aboutSection}>
@@ -82,11 +88,6 @@ const Body = () => {
 export default Body;
 
 const Wrapper = styled.div`
-  /* background-color: red; */
-  /* min-width: 100%; */
-  /* height: 100vh; */
-  /* display: grid;
-  grid-template-rows: 1fr auto; */
-  /* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-  font-family: "Roboto", sans-serif; */
+  .proj {
+  }
 `;

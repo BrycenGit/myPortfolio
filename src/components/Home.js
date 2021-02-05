@@ -8,11 +8,6 @@ const Home = (props) => {
     <Container>
       <div className="item title">Hello World, I'm Brycen!</div>
       <div className="item description">I develop web apps ^_^</div>
-      <Navigation
-        goToAbout={goToAbout}
-        goToContact={goToContact}
-        goToProjects={goToProjects}
-      />
       <Social />
     </Container>
   );
@@ -21,7 +16,7 @@ const Home = (props) => {
 export default Home;
 
 const Container = styled.div`
-  height: 60vh;
+  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
