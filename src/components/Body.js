@@ -64,7 +64,7 @@ const Body = () => {
           <About />
         </div>
         <div ref={contactSection}>
-          <Contact />
+          <Contact goToMain={goToMain} />
         </div>
       </>
     );

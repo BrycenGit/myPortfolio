@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import emailjs from "emailjs-com";
+import Home from "../icons/Home.svg";
 
 // import "./ContactUs.css";
 
-export default function ContactUs() {
+export default function ContactUs(props) {
+  const { goToMain } = props;
   function sendEmail(e) {
     e.preventDefault();
 
@@ -59,7 +61,9 @@ export default function ContactUs() {
             <button type="submit">Send</button>
           </div>
         </form>
-        <div className="info">Some Words</div>
+      </div>
+      <div className="homeDiv" onClick={goToMain}>
+        <img src={Home} height={40} />
       </div>
     </Container>
   );
@@ -72,10 +76,11 @@ const Container = styled.div`
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  /* background-image: linear-gradient(to right, #0dade1, #3bbdb7); */
+  color: white;
+  background-image: linear-gradient(to right, #0f6782, #0dade1);
   .contactArea {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     /* align-items: center; */
     justify-content: center;
     flex-wrap: wrap;
@@ -87,7 +92,7 @@ const Container = styled.div`
   }
   .title {
     font-size: 32pt;
-    text-decoration: underline;
+    /* text-decoration: underline; */
   }
   form {
     width: 350px;
@@ -104,7 +109,7 @@ const Container = styled.div`
     background-color: black;
     color: white;
   }
-
-  input {
+  .homeDiv {
+    padding-top: 20px;
   }
 `;

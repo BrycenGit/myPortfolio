@@ -13,13 +13,13 @@ const Social = () => {
           window.open("https://www.linkedin.com/in/brycenbartolome/")
         }
       >
-        <img height={20} src={Linkedin} />
+        <img height={30} src={Linkedin} />
       </div>
       <div
         className="icon"
         onClick={() => window.open("https://github.com/BrycenGit")}
       >
-        <img height={20} src={Github} />
+        <img height={30} src={Github} />
       </div>
       <div
         className="icon"
@@ -29,13 +29,13 @@ const Social = () => {
           )
         }
       >
-        <img height={20} src={Youtube} />
+        <img height={30} src={Youtube} />
       </div>
       <div
         className="icon"
         onClick={() => window.open("https://www.twitch.tv/sugarandshoyu")}
       >
-        <img height={20} src={Twitch} />
+        <img height={30} src={Twitch} />
       </div>
     </Container>
   );
@@ -47,9 +47,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 10px 10px;
-  gap: 1rem;
-
+  /* margin: 10px 10px; */
+  /* gap: 1rem; */
+  .icon {
+    margin: 10px;
+  }
   .icon:hover {
     cursor: pointer;
   }

@@ -16,7 +16,7 @@ const Projects = () => {
 export default Projects;
 
 const Container = styled.div`
-  background-color: #0dade1;
+  /* background-color: #0dade1; */
   min-width: 100%;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ const Container = styled.div`
   color: white;
 
   /* background-color: #0dade1; */
-  /* background-image: linear-gradient(to right, #0dade1, #3bbdb7); */
+  background-image: linear-gradient(to right, #0f6782, #0dade1);
   .title {
     font-size: 32pt;
     /* text-decoration: underline; */

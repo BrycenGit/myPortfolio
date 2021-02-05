@@ -45,7 +45,6 @@ const Container = styled.div`
   }
   .title {
     font-size: 32pt;
-    text-decoration: underline;
   }
   .imgDiv {
   }

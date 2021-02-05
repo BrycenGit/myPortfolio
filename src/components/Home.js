@@ -21,13 +21,13 @@ const Home = (props) => {
 export default Home;
 
 const Container = styled.div`
-  height: 100vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   align-items: center;
-  /* text-align: center; */
+  text-align: center;
   /* padding-top: 200px; */
   align-content: center;
   /* background-color: #f8f8f8; */
